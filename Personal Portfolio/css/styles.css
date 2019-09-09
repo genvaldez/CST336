@@ -1,0 +1,65 @@
+body{
+    background-color: #1FDECD;
+    color:white;
+}
+header, main, nav, footer{
+    text-align: center;
+}
+nav a{ /*links within "nav" container */
+padding:15px;
+padding-bottom: 4px;
+font-size: 1.8em;
+text-decoration: none; /*removes underline */
+color:#A413BE; /*by default, links are blue */
+    
+}
+nav a:hover{ /*pseudo class*/
+    border-bottom:2px pink solid;
+    font-size:2em;
+    transition: .9s; /*transition effect*/
+}
+
+#me, #welcomeText{
+    float: left;
+}
+footer{
+    clear: left;
+    font-size:0.8em;
+}
+table{
+    margin:0px auto;
+}
+td{
+    padding-right: 10px;
+    font-size: 1.3em;
+}
+td strong{
+    color:#3DD4F2;
+}
+#table-header{
+    background-color:#0C18C7;
+    
+}
+.table-row{
+    background-color: #12186E;
+}
+
+ul{
+    text-align: left;
+    padding-left: 200px;
+}
+
+.hobby{
+    color:yellow;
+}
+.pic{
+    width:75%;
+    height:auto;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size:4em;
+    margin-bottom: 0px;
+    
+    
+}
