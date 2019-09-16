@@ -10,11 +10,34 @@
             <div class="card card-default" id="card_contacts">
                 <div id="contacts"class="panel-collapse collapse show" aria-expanded="true" style="">
                     <ul class="list-group pull-down" id="contact-list">
-                        <li class="list-group-item">
+                        
+                        <script>
+                            function printContact(contact){
+                                var contactList=document.getElementById("contact-list");
+                                var contactListItem=document.createElement("li");
+                                contactListItem.setAttribute("class", "list-group-item");
+                                contactList.appendChild(contactListItem);
+                                
+                                // <div class="row w-100">
+                                var rowDiv=document.createElement("div");
+                                rowDiv.setAttribute("class", "row w-100");
+                                
+                                //Very IMPORTANT STEP
+                                rowDiv.appendChild(pictureColumnDiv);
+                                
+                                var pictureImg=document.createElement("img");
+                                pictureImg.setAttribute("class", "rounded-cirlce mx-auto d-block img-fluid");
+                                pictureImg.setAttribute("src", "http://desmos.themes.guide/bodeo/assets/images/users/m101.jpg");
+                                        
+                            }
+                        </script>
+                        
+                       <!-- <li class="list-group-item">
                             <div class="row w-100">
                                 <div class="col-12 col-sm-6 col-md-3 px-0">
                                     <img src="http://demos.themes.guide/bodeo/assets/images/users/m101.jpg" alt="Mike Anamendolla" class="rounded-circle mx-auto d-block img-fluid">
                                 </div>
+                                
                                 <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
                                     <span class="fa fa-mobile fa-2x text-success float-right pulse" title="online now"></span>
                                     <label class="name lead">Mike Anamendolla</label>
@@ -73,8 +96,8 @@
 
                             </div>
                         </div>
-                    </li>
-                        
+                    </li>-->
+                     
                     </ul>
                     <!--/contacts list-->
                 </div>

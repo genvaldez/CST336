@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>now you see me</title>
+        <title>Now You See It</title>
         
         <style>
             .hide{
@@ -10,21 +10,25 @@
         </style>
         
     </head>
+    
     <body>
-        <img id="see" src="/public/class_extersices/now-you-see-me.png" /> 
+        <img id="see" src="images/now-you-see-me.png" />
+        
         <div>
             <button id="change" Hide the cat></button>
+            <button id="moon">Send the cat to the moon</button>
         </div>
+        
         <script>
             let seeImage=document.getElementById('see');
-            let changeBotton=documen.getElementById('change');
-            changeBotton.addEventListener('click', function(e){
+            let changeButton=document.getElementById('change');
+            changeButton.addEventListener('click', function(e){
                 seeImage.setAttribute('src', 'images/now-you-dont.png');
             });
             document
-            .getElementById('moon');
-            .addEventListener('click', function(e){
-                seeImage.setAttribute('class', 'hide');
+                .getElementById('moon');
+                .addEventListener('click', function(e) {
+                    seeImage.setAttribute('class', 'hide');
             });
           
             
