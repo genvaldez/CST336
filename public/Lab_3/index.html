@@ -65,8 +65,8 @@
 <div id="q7Feedback"></div>
 <br><br>
 
-<h3><span id="markImg8"></span>What is one color on the US Flag?</h3>
-<input type="color" id="q8">
+<h3><span id="markImg8"></span>What are the colors on the US Flag?</h3>
+<div id="q8Choices"></div>
 <div id="q8Feedback"></div>
 <br><br>
 
@@ -101,6 +101,14 @@
             q4ChoicesArray = _.shuffle(q4ChoicesArray);
             for(let i = 0; i < q4ChoicesArray.length; i++){
                 $("#q4Choices").append(`<input type="radio" name="q4" id="${q4ChoicesArray[i]}" value="${q4ChoicesArray[i]}"> <label for="${q4ChoicesArray[i]}"> ${q4ChoicesArray[i]}</label>`);
+            }
+        }
+        displayQ8Choices();
+        function displayQ8Choices() {
+            let q8ChoicesArray = ["White", "Green", "Red", "Blue"];
+            q8ChoicesArray =_.shuffle(q8ChoicesArray);
+            for(let k = 0; k < q8ChoicesArray.length; k++){
+                $("#q8Choices").append(`<input type="checkbox" name="q8" id="${q8ChoicesArray[k]}" value="${q8ChoicesArray[k]}"> <label for="${q8ChoicesArray[k]}"> ${q8ChoicesArray[k]}</label>`);
             }
         }
 
@@ -165,7 +173,7 @@
             let q5result = new Boolean(q5_response == "seal2");
             let q6result = new Boolean($("#q6").val() == 50);
             let q7result = new Boolean($("#q7").val() == 13);
-            let q8result = new Boolean($("#q8").val() == "#ff0000" || $("#q8").val() == "#ffffff" || $("#q8").val() == "#0000ff");
+            let q8result = new Boolean($("#Red").is(":checked") && $("#White").is(":checked") && $("#Blue").is(":checked") && !$("#Green").is(":checked"));
              console.log($("#q8").val());
             // var q7_response = $("#q7").valueOf();
             // console.log(q7_response);
