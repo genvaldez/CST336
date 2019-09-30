@@ -19,8 +19,11 @@
         </div>
         
         <div id="directions" class="resultParas">
+            <span id="Wins">Wins:</span>
+            <br>
+            <span id="Losses">Losses:</span>
+            <br>
             Guess a number between 1 and 99 in seven attempts!
-            
             <br><br>
             <label for="guessField">Enter a guess: </label>
             <input type="text" id="guessField" class="guessField">
@@ -46,11 +49,20 @@
             var guessField= document.querySelector('.guessField');
             
             var guessCount=1;
-            var resetButton;
+            var resetButton=document.querySelector('#reset');
+            resetButton.style.display='none';
+            var Wins=0;
+            var Losses=0;
+            Wins=document.querySelector('#Wins');
+            Losses=document.querySelector('#Losses')
             guessField.focus();
             
             function checkGuess(){
                 var userGuess= Number(guessField.value);
+                
+                if(userGuess < 100 && userGuess>0){
+                    
+                
                 if(guessCount === 1){
                     guesses.innerHTML='Previous guesses: ';
                 }
@@ -73,7 +85,11 @@
                         lowOrHi.innerHTML='Last guess was too high!';
                     }
                 }
-                guessCount++;
+                 guessCount++;   
+                }else{
+                    lastResult.innerHTML='Guess was outside of range, Try again!';
+                }
+        
                 guessField.value='';
                 guessField.focus();
             }
@@ -87,7 +103,7 @@
             }
             
             function resetGame(){
-                guessCount=1;
+                guessCount = 1;
                 
                 var resetParas =document.querySelectorAll('.resultParas p');
                 for(var i=0; i<resetParas.length; i++){
