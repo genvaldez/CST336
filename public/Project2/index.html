@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Slot Machine</title>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <script src="functions.js"></script>
+        
+        <script type="text/javascript">
+            function DoSpin()
+            {
+                var pick;
+                pick=RandomOneOf(["cherry.png", "lemon.png", "seven.png"]);
+                document.getElementById("slot1").src; 
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <div class="jumbotron">
+            <h1>Slot Machine</h1>
+        </div>
+        
+        <div id="main">
+            
+        <img id="slot1" alt="slot image" border=1 
+          src="img/cherry.png" />
+             <br /><br />
+         <input type="button" value="Click to Spin" onclick="DoSpin();" />
+       <!-- <label for="gamble">Enter amount to gamble: </label>
+        <input type="text" id="gambleField" class="gambleField"/>
+        <input type= "submit" value="Submit gamble" class="gambleSubmit"/> -->
+        <br>
+        
+        </div>
+    
+        
+        <script>
+            //JavaScript goes here
+            
+          //  var gambleSubmit=document.querySelector('.gambleSubmit');
+            //var gambleField= document.querySelector('.gambleField');
+            
+            function displaySymbol($randomValue, $pos){
+                
+                switch($randomValue){
+                    case 0: $symbol="seven";
+                            break;
+                    case 1: $symbol="cherry";
+                            break;
+                    case 2: $symbol="lemon";
+                }
+                document.write("<img id='reel$pos' src='img/$symbol.png' alt='$symbol' title='$symbol' width='70'>");
+                /*
+                var image=document.getElementById("#img");
+                if($randomValue==0){
+                    image.src="img/seven.png";
+                }else if($randomValue==1){
+                    image.src="img/cherry.png";
+                }else{
+                    image.src="img/lemon.png";
+                }
+                */
+            }
+            
+            function displayPoints($randomValue1, $randomValue2,$randomValue3, $randValue4 ){
+                document.write("<div id='output'>");
+                if($randomValue1 == $randomValue2 && $randomValue2 == $randomValue3){
+            switch($randomValue1){
+                case 0: $totalPoints = 1000;
+                    document.write("<h1>Jackpot!</h1>");
+                    break;
+                case 1: $totalPoints = 500;
+                    break;
+                case 2: $totalPoints = 250;
+                    break;
+                case 3: $totalPoints = 900;
+            }
+            document.write("<h2>You won $totalPoints points!</h2>");
+            }else{
+                document.write("<h3> Try Again! </h3>");
+                
+            }
+             document.write("</div>");
+         }
+            
+          function play(){
+            for($i=1; $i<4; $i++){
+            ${"randomValue" . $i } = Math.random(0,3);
+                displaySymbol(${"randomValue" . $i}, $i );
+            }
+            
+            displayPoints($randomValue1, $randomValue2, $randomValue3, $randomValue4);
+         }
+        </script>
+    </body>
+</html>
