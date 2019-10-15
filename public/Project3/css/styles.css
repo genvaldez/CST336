@@ -1,0 +1,17 @@
+.title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+.jumbotron{
+    margin-bottom: 0px;
+    color:white;
+    background-color: #4aa1f3;
+}
+.row{
+    text-align: center;
+}
+body{
+     background-image:url("../img/download.jpg");
+     background-size: cover;
+}

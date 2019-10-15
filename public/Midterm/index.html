@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Midterm</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+         <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dzNvk80XY9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <script>
+        $(function () {
+            $(".like").click(function () {likeFunction(this); });
+            $(".dislike").click(function () { dislikeFunction(this);});
+        });
+        
+    function likeFunction() {
+     $.ajax({
+      type: "POST",
+      url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php?videoId=dzNvk80XY9s&action=action",
+      datatype:"json",
+      success: function (){}
+    });
+}
+function dislikeFunction() {
+  $.ajax({
+      type: "POST",
+      url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php?videoId=dzNvk80XY9s&action=action",
+      datatype:"json",
+      success: function (){}
+  });
+}
+            
+    </script>
+    </head>
+    <body>
+        <div style="float">
+          <a href="question.html"><button id="q">Answer Question</button></a>
+         <button type="button" id="comments">see comments</button> 
+        </div>
+         
+        <div style="float">
+          <img id="clike" src="img/cancel_like.png" alt="dislike">
+         <img id="dlike"src="img/cancel_dislike.png" alt="dislike"> 
+         <img id="like"src="img/like.png" alt="dislike">
+         <img id="l"src="img/dislike.png" alt="dislike">
+         
+         <div id="rubricDiv">   
+  <table border="1" width="600" cellpadding="10px">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Task Description</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:green">
+        <td>1</td>
+        <td>All elements are included (video and buttons)<br></td>
+        <td width="20" align="center">10</td>
+      </tr>     
+      <tr style="color:orange">
+        <td>2</td>
+        <td>Initial number of likes/dislikes is displayed from API when loading page<br></td>
+        <td width="20" align="center">10</td>
+      </tr>     
+      <tr style="color:red">
+        <td>3</td>
+        <td>When clicking on any like/dislike button, it's hidden and the other blue/grayedout button is displayed <br></td>
+        <td width="20" align="center">10</td>
+      </tr>     
+      <tr style="color:orange">
+        <td>4</td>
+        <td>When clicking on any like/dislike button, the corresponding value is updated via an AJAX call <br></td>
+        <td width="20" align="center">20</td>
+      </tr>     
+      <tr style="color:red">
+        <td>5</td>
+        <td>When clicking on "See Comments", author, date, and comment are displayed via AJAX in the following format: <br> <b>Author</b> <i>Date</i><br>Comment<br></td>
+        <td width="20" align="center">20</td>
+      </tr>     
+      <tr style="color:red">
+        <td>6</td>
+        <td>When clicking on "See Comments", comments are in random order<br></td>
+        <td width="20" align="center">10</td>
+      </tr>
+      <tr style="color:red">
+        <td>7</td>
+        <td>When clicking on "See Comments", stars are displayed based on the RATING value<br></td>
+        <td width="20" align="center">10</td>
+      </tr>
+      <tr style="color:green">
+        <td>8</td>
+        <td>When clicking on "Answer Question" a dropdown question is displayed <br></td>
+        <td width="20" align="center">5</td>
+      </tr>    
+      <tr style="color:green">
+        <td>9</td>
+        <td>When answering the question, color-coded feedback is displayed <br></td>
+        <td width="20" align="center">15</td>
+      </tr>    
+      <tr style="color:green">
+        <td>10</td>
+        <td>Page has nice design: content is centered, all buttons right below the video <br></td>
+        <td width="20" align="center">10</td>
+      </tr>
+      <tr style="color:green">
+        <td>11</td>
+        <td>This rubric is properly included AND UPDATED</td>
+        <td width="20" align="center">3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>T O T A L </td>
+        <td width="20" align="center">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+         
+         </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h3>What was the video about?</h3>
+          <select id="q1">
+            <option value="">Select the Best Answer</option>
+            <option value="sleep">Sleeping</option>
+            <option value="pop">Just another pop song</option>
+            <option value="loss">A song about loss and heartbreak</option>
+            <option value="fail">What to do to not fail a Midterm</option>
+            
+    <script>
+    function rightAnswer(){
+            $("#q1").html("Correct!");
+            $("#q1").attr("class", "bg-success text-red");
+    </script>
+    </body>
+</html>
